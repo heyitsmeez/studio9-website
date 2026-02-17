@@ -154,10 +154,13 @@
             text-transform: uppercase;
         }
 
-        .logo-nine {
-            font-family: var(--font-display);
-            font-weight: 600;
-            font-style: italic;
+        .logo-nine-svg {
+            display: inline-block;
+            vertical-align: baseline;
+            height: 0.85em;
+            width: auto;
+            margin-left: 0.05em;
+            margin-bottom: -0.05em;
             color: var(--olive-light);
         }
 
@@ -210,10 +213,37 @@
             animation: fadeUp 0.8s ease-out 1.7s forwards;
         }
 
+        /* ── Enquiry CTA ── */
+        .enquiry-cta {
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: fadeUp 0.8s ease-out 1.8s forwards;
+        }
+
+        .enquiry-cta p {
+            font-family: var(--font-display);
+            font-weight: 300;
+            font-size: 0.95rem;
+            line-height: 1.9;
+            color: var(--olive-dark);
+        }
+
+        .enquiry-cta a {
+            color: var(--olive-dark);
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid var(--olive-light);
+            transition: border-color 0.3s ease;
+        }
+
+        .enquiry-cta a:hover {
+            border-color: var(--olive-dark);
+        }
+
         /* ── Email signup ── */
         .signup-section {
             opacity: 0;
-            animation: fadeUp 0.8s ease-out 1.9s forwards;
+            animation: fadeUp 0.8s ease-out 2.1s forwards;
             margin-bottom: 3.5rem;
         }
 
@@ -299,7 +329,7 @@
             flex-wrap: wrap;
             margin-bottom: 3.5rem;
             opacity: 0;
-            animation: fadeUp 0.8s ease-out 2.1s forwards;
+            animation: fadeUp 0.8s ease-out 2.4s forwards;
         }
 
         .service-item {
@@ -327,7 +357,7 @@
         /* ── Footer ── */
         .footer-info {
             opacity: 0;
-            animation: fadeUp 0.8s ease-out 2.3s forwards;
+            animation: fadeUp 0.8s ease-out 2.6s forwards;
             text-align: center;
         }
 
@@ -469,7 +499,16 @@
 
             <!-- Logo -->
             <div class="logo-lockup">
-                <h1 class="logo-studio">Studio <span class="logo-nine">9</span></h1>
+                <h1 class="logo-studio">Studio<!-- 
+                    Custom 9 glyph matching brand logo 
+                --><svg class="logo-nine-svg" viewBox="0 0 120 160" aria-label="9" role="img" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Main open circle (270° arc, gap at ~5 o'clock) -->
+                        <path d="M95,55 A40,40 0 1,0 75,90" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="butt"/>
+                        <!-- Small dot near the gap -->
+                        <circle cx="78" cy="78" r="8" fill="currentColor"/>
+                        <!-- Diagonal tail -->
+                        <line x1="75" y1="90" x2="55" y2="150" stroke="currentColor" stroke-width="16" stroke-linecap="butt"/>
+                    </svg></h1>
                 <p class="logo-sub">Design & Supply</p>
             </div>
 
@@ -485,9 +524,15 @@
             <!-- Coming soon badge -->
             <div class="coming-soon">Coming Soon</div>
 
+            <!-- Enquiry CTA -->
+            <div class="enquiry-cta">
+                <p>Our new website is on its way, but we're open and ready to go.<br>
+                Get in touch at <a href="mailto:hello@studio9design.com.au">hello@studio9design.com.au</a> to start your project with us.</p>
+            </div>
+
             <!-- Email Signup -->
             <div class="signup-section">
-                <p class="signup-label">Be the first to know</p>
+                <p class="signup-label">Or sign up to be notified at launch</p>
 
                 <!-- 
                     ╔══════════════════════════════════════════════════════════╗
@@ -512,7 +557,7 @@
                 <span class="service-item">Interior Design</span>
                 <span class="service-item">Project Management</span>
                 <span class="service-item">Premium Finishes</span>
-                <span class="service-item">Supply</span>
+                <span class="service-item">Material Supply</span>
             </div>
 
             <!-- Footer -->
