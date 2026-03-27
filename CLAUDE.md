@@ -57,7 +57,6 @@ Teaser/landing page for Studio 9 Design & Supply, an interior design studio and 
 - Email addresses must not use Cloudflare email protection encoding — use plain `mailto:` links
 
 ### Pending TODOs (found in code)
-- Mailchimp form action URL still needs configuring (currently placeholder `YOUR_MAILCHIMP_FORM_ACTION_URL`)
 - Instagram social link URL needs updating (currently `#`)
 
 ## Page Structure (index.html)

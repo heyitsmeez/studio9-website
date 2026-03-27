@@ -526,16 +526,10 @@
             <div class="signup-section">
                 <p class="signup-label">Or sign up to be notified at launch</p>
 
-                <!-- 
-                    ╔══════════════════════════════════════════════════════════╗
-                    ║  MAILCHIMP SETUP:                                       ║
-                    ║  1. Mailchimp → Audience → Signup forms → Embedded      ║
-                    ║  2. Copy the form action URL                            ║
-                    ║  3. Replace YOUR_MAILCHIMP_FORM_ACTION_URL below        ║
-                    ╚══════════════════════════════════════════════════════════╝
-                -->
-                <form class="signup-form" id="signup-form" action="YOUR_MAILCHIMP_FORM_ACTION_URL" method="post" target="_blank">
+                <form class="signup-form" id="signup-form" action="https://s9d.us15.list-manage.com/subscribe/post?u=5e31d19ffbb7f7163c76f834f&amp;id=144d4a2c8b&amp;f_id=000996e1f0" method="post" target="_blank">
                     <input type="email" name="EMAIL" placeholder="Your email address" required autocomplete="email">
+                    <!-- Honeypot anti-spam field — do not remove -->
+                    <div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name="b_5e31d19ffbb7f7163c76f834f_144d4a2c8b" tabindex="-1" value=""></div>
                     <button type="submit">Notify Me</button>
                 </form>
 
@@ -572,6 +566,15 @@
     <script>
         document.getElementById('signup-form').addEventListener('submit', function(e) {
             var form = this;
-            var action = form.getAttribute('action');
+            var successMsg = document.getElementById('signup-success');
 
-            if (action && action !== 'YOUR_MAILCHIMP_FORM_ACTION_URL') {
+            // Submit to Mailchimp via the form action (opens in new tab)
+            // Then show a local thank-you message
+            setTimeout(function() {
+                form.style.display = 'none';
+                successMsg.classList.add('show');
+            }, 300);
+        });
+    </script>
+</body>
+</html>
