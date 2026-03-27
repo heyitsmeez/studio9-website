@@ -534,7 +534,7 @@
                     ║  3. Replace YOUR_MAILCHIMP_FORM_ACTION_URL below        ║
                     ╚══════════════════════════════════════════════════════════╝
                 -->
-                <form class="signup-form" id="signup-form" action="YOUR_MAILCHIMP_FORM_ACTION_URL" method="post" target="_blank">
+                <form class="signup-form" id="signup-form" action="https://s9d.us15.list-manage.com/subscribe/post?u=5e31d19ffbb7f7163c76f834f&amp;id=144d4a2c8b&amp;f_id=000996e1f0" method="post" target="_blank">
                     <input type="email" name="EMAIL" placeholder="Your email address" required autocomplete="email">
                     <button type="submit">Notify Me</button>
                 </form>
@@ -574,4 +574,4 @@
             var form = this;
             var action = form.getAttribute('action');
 
-            if (action && action !== 'YOUR_MAILCHIMP_FORM_ACTION_URL') {
+            if (action && action.indexOf('list-manage.com') !== -1) {
